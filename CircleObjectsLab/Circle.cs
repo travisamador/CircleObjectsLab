@@ -39,7 +39,7 @@ namespace CircleObjectsLab
         private string FormatNumber(double x)
         {
             
-            return Math.Round(x).ToString();
+            return Math.Round(x, 2).ToString();
         }
     }
 }
