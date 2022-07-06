@@ -15,11 +15,19 @@ namespace CircleObjectsLab
                 try
                 {
                     double num = double.Parse(Console.ReadLine());
+                    if(num < 0)
+                    {
+                        throw new Exception("Radius cannot be negative. Try Again.");
+                    }
                     return num;
                 }
                 catch (FormatException e)
                 {
                     Console.WriteLine(e.Message + "Try again.");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
                 }
             }
         }
